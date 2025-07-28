@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lector"
+version = "0.0.1" # update this dynamically
+description = "Qt-based ebook reader"
+readme = "README.md"
+requires-python = ">=3.13, <4.0"
+license = { text = "GPL-3.0-only" }
+authors = [{ name = "BasioMeusPuga", email = "disgruntled.mob@gmail.com" }, { name = "codevenkat" }]
+keywords = ["qt", "ebook", "epub", "kindle", "mobi", "comic", "cbz", "cbr", "pdf"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3"
+]
+dependencies = [
+    "beautifulsoup4==4.7.1",
+	"lxml==6.0.0",
+	"xmltodict==0.11.0",
+	"pyqt5==5.15.11",
+	"standard-imghdr==3.13.0"
+]
+
+[project.optional-dependencies]
+dev = ["pyinstaller==6.14.2"]
+test = []
+pdf = ["pymupdf==1.26.3"]
+djvu = ["djvulibre-python==0.9.3"]
+md = ["markdown==3.8.2"]
+txt = ["textile==4.0.3"]
+
+[project.scripts]
+lector = "lector.__main__:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"lector" = ["resources/about.html", "resources/translations/**"]
+
+[tool.setuptools.data-files]
+"share/icons/hicolor/scalable/apps" = ["lector/resources/raw/Lector.png"]
+"share/applications" = ["lector/resources/raw/io.github.BasioMeusPuga.Lector.desktop"]

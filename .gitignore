@@ -1,6 +1,9 @@
-__pycache__/
-.gitignore
+**/__pycache__/
+*.pyc
 .vscode/
-parsers/__pycache__/
 books/
 Examples/
+dist/
+build/
+*.egg-info
+*.spec

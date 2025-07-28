@@ -1,5 +1,7 @@
 <p align="center"><img src="lector/resources/raw/logo/logotype_horizontal.svg" alt="Lector" height="90px"></p>
 
+(this is a fork as the original project has been abandoned)
+
 Qt based ebook reader
 
 Currently supports:
@@ -12,28 +14,24 @@ Currently supports:
 * cbr / cbz
 * md
 
-## Contribute
-[Paypal](https://www.paypal.me/supportlector)
-
-Bitcoin: 17jaxj26vFJNqQ2hEVerbBV5fpTusfqFro
-
 ## Requirements
 ### Needed
-| Package | Version tested |
-| --- | --- |
-| Python | 3.6 |
-| PyQt5 | 5.10.1 |
-| python-lxml | 4.3.0 |
-| python-beautifulsoup4 | 4.6.0 |
-| python-xmltodict | 0.11.0 |
+Python 3.13, pip
 
-### Optional
-| Package | Version tested | Required for |
-| --- | --- | --- |
-| python-pymupdf | 1.14.5 | PDF support |
-| python-djvulibre | 0.8.4 | DjVu support |
-| python-markdown | 3.0.1 | Markdown support |
-| textile | 3.0.4 | TXT support |
+### Building Instructions
+Binary releases will be available soon. For now please compile the program using a Python installation.
+
+* Clone the repository
+* Create a virtualenv and activate it
+* `pip install .`
+* You can now run the program with `lector`
+
+You can also at this step install optional support for more file extensions as extras. Currently available are `pdf`, `djvu`, `md`, `txt`. To get all of them, run
+```shell
+pip install '.[all]'
+```
+
+For `djvu` support make sure you have the required version of djvulibre available on your system. Note that as the `djvu` module [only supports linux](https://github.com/FriedrichFroebel/python-djvulibre?tab=readme-ov-file#about-this-fork) as of now, windows support for it is not possible.
 
 ## Support
 When reporting issues:
@@ -42,23 +40,6 @@ When reporting issues:
 * Include the log `~/.local/share/Lector/Lector.log` AND terminal output.
 * If you're having trouble with a book while the rest of the application / other books work, please link to a copy of the book itself.
 * If nothing is working, please make sure the requirements mentioned above are all installed, and are at least at the version mentioned.
-
-## Installation
-### Manual
-0. Install dependencies - I recommend using your package manager for this.
-1. Clone repository
-2. Type the following in the root directory:
-
-        $ python setup.py build
-        # python setup.py install
-3. OR launch with `lector/__main__.py`
-
-### Available packages
-* [AUR - Releases](https://aur.archlinux.org/packages/lector/)
-* [AUR - Git](https://aur.archlinux.org/packages/lector-git/)
-* [Gentoo (unofficial)](https://bitbucket.org/szymonsz/gen2-overlay/src/master/app-text/lector/)
-* [Fedora (unofficial)](https://copr.fedorainfracloud.org/coprs/bugzy/lector/)
-* [openSUSE](https://software.opensuse.org/package/lector)
 
 ## Translations
 1. There is a `SAMPLE.ts` file [here](https://github.com/BasioMeusPuga/Lector/tree/master/lector/resources/translations). Open it in `Qt Linguist`.
