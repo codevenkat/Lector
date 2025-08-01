@@ -16,7 +16,7 @@ Currently supports:
 
 ## Requirements
 ### Needed
-Python 3.13, pip
+Python >= 3.8
 
 ### Building Instructions
 Binary releases will be available soon. For now please compile the program using a Python installation.
