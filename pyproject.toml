@@ -18,15 +18,15 @@ classifiers = [
     "Programming Language :: Python :: 3"
 ]
 dependencies = [
-    "beautifulsoup4==4.7.1",
+    "beautifulsoup4==4.13.4",
 	"lxml==6.0.0",
-	"xmltodict==0.11.0",
+	"xmltodict==0.14.2",
 	"pyqt5==5.15.11",
 	"standard-imghdr==3.13.0"
 ]
 
 [project.optional-dependencies]
-dev = ["pyinstaller==6.14.2"]
+dev = ["pyinstaller==6.15.0"]
 test = []
 pdf = ["pymupdf==1.26.3"]
 djvu = ["djvulibre-python==0.9.3"]
