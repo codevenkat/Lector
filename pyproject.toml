@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=82.0.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -18,20 +18,20 @@ classifiers = [
     "Programming Language :: Python :: 3"
 ]
 dependencies = [
-    "beautifulsoup4==4.7.1",
-	"lxml==6.0.0",
-	"xmltodict==0.11.0",
+    "beautifulsoup4==4.14.3",
+	"lxml==6.1.0",
+	"xmltodict==1.0.4",
 	"pyqt5==5.15.11",
 	"standard-imghdr==3.13.0"
 ]
 
 [project.optional-dependencies]
-dev = ["pyinstaller==6.14.2"]
+dev = ["pyinstaller==6.20.0"]
 test = []
-pdf = ["pymupdf==1.26.3"]
+pdf = ["pymupdf==1.26.5"]
 djvu = ["djvulibre-python==0.9.3"]
-md = ["markdown==3.8.2"]
-txt = ["textile==4.0.3"]
+md = ["markdown==3.9"]
+txt = ["textile==4.0.4"]
 
 [project.scripts]
 lector = "lector.__main__:main"
